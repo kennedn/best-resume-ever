@@ -1,4 +1,6 @@
 /* #*/ export const PERSON = `
+# Any fields left unchanged, please delete so your resume is fully yours!
+
 name:
   first: Joshua
   middle: 
@@ -10,6 +12,8 @@ position: Professional Tinkerer
 birth:
   year: 1995
   location: Scotland
+
+# you may add more experiences by duplicating the template
 
 experience:
 - company: NatWest
@@ -74,7 +78,6 @@ education:
 #   timeperiod: March 2013 - December 2014
 #   description: HNC, Edinburgh College.
 #   website: http://www.edinburghcollege.ac.uk/Welcome/Our-Campuses/Granton 
-# skill level goes 0 to 100
 skills:
 - name: Embedded C
   level: 80
@@ -119,6 +122,7 @@ projects:
 
 
 
+# optional, not all resume templates have hobbies included
 hobbies:
 - name: Video Games
   iconClass: fa fa-gamepad
