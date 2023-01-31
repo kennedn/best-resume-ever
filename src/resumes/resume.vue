@@ -237,9 +237,14 @@ li {
   padding-inline-start: 1ch;
 }
 
+@font-face {
+	font-family: ubuntu;
+  src: url('~@/assets/font/Ubuntu-R.ttf');
+}
+
 .resume {
   position: relative;
-  font-family:'Ubuntu' !important;
+  font-family:'ubuntu' !important;
   font-size: 1.1em;
 }
 
