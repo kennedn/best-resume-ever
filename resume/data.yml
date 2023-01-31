@@ -1,71 +1,123 @@
 /* #*/ export const PERSON = `
 name:
-  first: John
-  middle:
-  last: Doe
-about: Hi, my name is John Doe. I"m just about the most boring type of person you could
-       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
-       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+  first: Joshua
+  middle: 
+  last: Kennedy
+about: I have built a career on exploring rabbit holes. As it turns out, rabbits come in many colours and I have yet to find one that did not have something to offer. I have had as much fun trying to perfect my latest cooking endeavour as I've had trying to digest the broad strokes of quantum mechanics. In applying this same exploratory enthusiasm to computing I have found my life's work. For over a decade I have been delving deeper and deeper into the field of computing. From games development to container orchestration to signal processing I have with each step been building holistic knowledge of the field. In recent years I have finally made it down to the metal, exploring concepts such as Embedded C, Programmable IO and FPGA design through my personal projects.
+
+position: Professional Tinkerer
 
 birth:
-  year: 1990
-  location: New York
+  year: 1995
+  location: Scotland
 
 experience:
-- company: Company A
-  position: Developer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
-  website: https://example.com
+- company: NatWest
+  position: Cloud Automation Engineer
+  timeperiod: Since September 2021
+  description: 
+    - Joined a small R&D team with the purpose of expanding the banks on-prem cloud computing capabilities. Honed skills in Openshift, Kubernetes and general container orchestration.
+    - Worked closely with colleagues from other teams to deliver proof of concept pieces for certificate automation via cert-manager and centralised secret management via Hashicorp Vault
+  website: https://natwest.com
 
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
 
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
+- company: NatWest
+  position: Middleware Systems Engineer
+  timeperiod: February 2019 - September 2021
+  description: 
+    - Built automation to streamline common support tasks for deployment orchestration tooling within a small feature team. One of the tasks automated was agent upgrading. This facilitated the upgrade of over 1600 agents in the span of 6 months across 50 different teams. A feat that would have otherwise been unachievable in a reasonable timeframe.
+    - Provided support for users and administrators in deployment orchestration. Created a large amount of documentation and hosted workshops. This resulted in the upskilling of an entire support team in the administration of related tooling. 
+  website: https://natwest.com
+  
+- company: NatWest
+  position: Middleware Technical Analyst 
+  timeperiod: January 2018 - February 2019
+  description: 
+    - Delivered technical support for Java based enterprise software, providing successful resolution for over 150 individual incidents.
+    - Developed infrastructure support scripts for and assisted in standing up deployment orchestration tooling. Aquired new skills in RESTful API interaction and high availability clustering technologies as a result.
+  website: https://natwest.com
+
+- company: NatWest
+  position: WebSphere Technical Apprentice
+  timeperiod: January 2016 - January 2018
+  description: 
+    - Developed knowledge on KornShell scripting and used it to automate a manual licensing process for ~5000 servers.
+    - Audited and improved a certificate renewal tracking workflow. Obtained skills in Visual Basic and SQL along the way.
+  website: https://natwest.com
+
+
+
+
 
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
-  website: https://example.com
+- degree: Red Hat Certified Specialist in Containers and Kubernetes
+  timeperiod: July 2022
+  description: Proficiency in podman, kubernetes & OpenShift
+  website: https://rhtapps.redhat.com/verify?certId=220-123-673
 
-- degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
+- degree: IT & Telecoms Professional
+  timeperiod: January 2017 - January 2018
+  description: SCQF Level 8, QA Apprenticeship
+  website: https://www.qa.com/learners/become-an-apprentice/
 
+- degree: IT & Telecoms Professional
+  timeperiod: January 2016 - January 2017
+  description: SCQF Level 6, QA Apprenticeship
+  website: https://www.qa.com/learners/become-an-apprentice/
+
+# - degree: Computer Games Development
+#   timeperiod: March 2014 - December 2015
+#   description: HND, Edinburgh College.
+#   website: http://www.edinburghcollege.ac.uk/Welcome/Our-Campuses/Granton 
+
+# - degree: Computer Games Development
+#   timeperiod: March 2013 - December 2014
+#   description: HNC, Edinburgh College.
+#   website: http://www.edinburghcollege.ac.uk/Welcome/Our-Campuses/Granton 
 # skill level goes 0 to 100
 skills:
-- name: HTML5
-  level: 99
-- name: CSS3
-  level: 95
-- name: JavaScript
-  level: 97
-- name: Node.js
-  level: 93
-- name: Angular 2
-  level: 60
-- name: TypeScript
+- name: Embedded C
   level: 80
-- name: ES.Next
-  level: 70
-- name: Docker
+- name: Programmable IO
+  level: 80
+- name: Verilog
+  level: 80
+- name: AVR
+  level: 80
+- name: Python
   level: 99
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
+- name: JavaScript
+  level: 80
+- name: Golang
+  level: 80
+- name: Linux
+  level: 99
+- name: Container Orchestration
+  level: 70
 
+knowledge: 
 projects:
-- name: best-resume-ever
-  platform: Vue
-  timeperiod: February 2016
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: Snowdon II WiFi
+  platform: C / Programmable IO
+  description: A hardware mod for the Snowdon II soundbar. Implements a HTTP server and infrared NEC encoder from scratch to enable IR remote code signalling over WiFi.
+  url: https://github.com/kennedn/snowdon-ii-wifi
+
+- name: Stateful
+  platform: C / Javascript
+  description: A Pebble watchapp designed to control RESTful API's with minimal clicks
+  url: https://github.com/kennedn/stateful
+
+- name: MPRIS Panel 
+  platform: Javascript / DBus
+  description: A media controller for linux that uses a 'smart-switching' technique to effortlessly control multiple media sources.
+  url: https://github.com/kennedn/gnome-shell-extension-mprispanel
+
+- name: Tvcom
+  platform: Python
+  description: A python module that provides a friendly interface for commanding legacy LG tvs via a serial connection.
+  url: https://github.com/kennedn/tvcom
+
+
 
 hobbies:
 - name: Video Games
@@ -76,18 +128,18 @@ hobbies:
   iconClass: fa fa-pencil
   url: https://example.com
 
-contributions:
-- name: best-resume-ever
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
-  url: https://github.com/salomonelli/best-resume-ever
+certificates:
+- name: Cisco Certified Entry Networking Technician (CCENT)
+  description: Blah Blah Blah
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
+  email: kennedn@msn.com
+  phone: 
+  street:
+  city:
+  website: kennedn.com
+  github: kennedn
+  linkedin: kennedn 
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
 lang: en
 `

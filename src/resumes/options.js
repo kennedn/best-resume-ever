@@ -34,7 +34,9 @@ function getVueOptions (name) {
 
             contactLinks() {
                 const links = {};
-
+                if(this.person.contact.website) {
+                    links.website = `https://${this.person.contact.website}`;
+                }
                 if(this.person.contact.github) {
                     links.github = `https://github.com/${this.person.contact.github}`;
                 }

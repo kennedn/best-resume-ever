@@ -59,7 +59,7 @@ const convert = async () => {
                 args: ['--no-sandbox']
             });
             const page = await browser.newPage();
-            await page.goto(`http://localhost:${config.dev.port}/#/resume/` + dir.name, {
+            await page.goto(`http://localhost:${config.dev.port}/#/`, {
                 waitUntil: 'networkidle2'
             });
 
@@ -68,9 +68,25 @@ const convert = async () => {
             ) {
                 fs.mkdirSync(fullDirectoryPath);
             }
+            await page.addStyleTag({
+                content:
+                `html {
+                    -webkit-print-color-adjust: exact !important;
+                    // -webkit-filter: opacity(1) !important;
+                    }
+                `
+            });
+
+            await page.evaluate(() => document.querySelector('.content').style.background = 'none');
+
+            const height = await page.evaluate(
+                () => document.documentElement.offsetHeight
+            );
             await page.pdf({
                 path: fullDirectoryPath + dir.name + '.pdf',
-                format: 'A4'
+                height: (height + 1) + 'px',
+                // printBackground: true,
+                margin: 'none'
             });
             await browser.close();
         });

@@ -431,6 +431,12 @@ a {
 .section-content__text--light {
   color: rgba(0,0,0,0.42);
   font-weight: 300;
+  text-indent: 5%; 
+}
+
+.section-content__text--light::after {
+  content: "\a";
+  white-space: pre;
 }
 
 .section-content__subheader,

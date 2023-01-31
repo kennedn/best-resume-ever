@@ -4,10 +4,11 @@ const lang = {
     born: 'Born',
     bornIn: 'in',
     experience: 'Experience',
-    education: 'Education',
+    education: 'Education and Certification',
     skills: 'Skills',
-    projects: 'Projects',
+    projects: 'Personal Projects',
     contributions: 'Contributions',
+    certificates: 'Certificates',
     about: 'About me'
 };
 export default lang;
