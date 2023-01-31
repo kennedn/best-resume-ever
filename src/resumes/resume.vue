@@ -207,8 +207,10 @@ export default Vue.component(name, getVueOptions(name));
 @base-padding: 30px;
 @left-column-width: 60%;
 
+
 .resume {
   background-color: @banner-color;
+  overflow: auto;
 }
 
 a {
@@ -220,6 +222,9 @@ a {
     color: inherit;
   }
 }
+
+
+
 
 ul {
   padding-left: 8px;
@@ -238,37 +243,80 @@ li {
   font-size: 1.1em;
 }
 
-.picture {
-  position: absolute;
-  top: 0;
-  left: (@base-padding * 2) - (@picture-size / 2) + @picture-offset;
-  // left: 0;
-  height: @picture-size;
-  width: @picture-size;
-  border-radius: 50%;
-  border: 5px solid @accent-color;
-  content: url('../../resume/id.jpg');
-  z-index: 2;
+// @media (max-width: 450px) {
+
+// @media (min-width: 451px) {
+// }
+
+
+@media (min-width:401px) {
+  .banner {
+    width: calc(100% - @base-padding * 2);
+    height: @banner-height;
+    padding: @base-padding;
+    background-color: @banner-color;
+
+    color: white;
+
+    &__fullname {
+      font-size: 32px;
+      overflow: auto;
+    }
+
+    &__position {
+      font-size: 16px;
+    }
+
+    &__location {
+      font-size: 12px;
+    }
+  }
+  .picture {
+    position: absolute;
+    top: 0;
+    left: (@base-padding * 2) - (@picture-size / 2) + @picture-offset;
+    // left: 0;
+    height: @picture-size;
+    width: @picture-size;
+    border-radius: 50%;
+    border: 5px solid @accent-color;
+    content: url('../../resume/id.jpg');
+    z-index: 2;
+  }
 }
 
-.banner {
-  width: calc(100% - @base-padding * 2);
-  height: @banner-height;
-  padding: @base-padding;
-  background-color: @banner-color;
+@media (max-width:400px) {
+  .banner {
+    width: calc(100% - @base-padding * 2);
+    height: @banner-height;
+    padding: @base-padding;
+    background-color: @banner-color;
 
-  color: white;
+    color: white;
 
-  &__fullname {
-    font-size: 32px;
+    &__fullname {
+      font-size: 24px;
+      overflow: auto;
+    }
+
+    &__position {
+      font-size: 14px;
+    }
+
+    &__location {
+      font-size: 12px;
+    }
   }
-
-  &__position {
-    font-size: 16px;
-  }
-
-  &__location {
-    font-size: 12px;
+  .picture {
+    position: absolute;
+    top: 0;
+    left: (@base-padding * 2) - (@picture-size / 2) + @picture-offset ;
+    height: @picture-size;
+    width: @picture-size;
+    border-radius: 50%;
+    border: 5px solid @accent-color;
+    content: url('../../resume/id.jpg');
+    z-index: 2;
   }
 }
 
@@ -276,10 +324,12 @@ li {
   display: flex;
   width: 100%;
   height: 100%;
+  min-width: 550px;
   background: linear-gradient(to right,white 2px,transparent 2px),linear-gradient(to right,white 2px,transparent 2px)0 100%,linear-gradient(to left,white 2px,transparent 2px)100% 0,linear-gradient(to left,white 2px,transparent 2px)100% 100%,linear-gradient(to bottom,white 2px,transparent 2px),linear-gradient(to bottom,white 2px,transparent 2px)100% 0,linear-gradient(to top,white 2px,transparent 2px)0 100%,linear-gradient(to top,white 2px,transparent 2px)100% 100%;
   background-color: rgba(0, 0, 0, 0);
   background-repeat: no-repeat;
   background-size: 20px 20px;
+  overflow: auto;
 
   &__left,
   &__right {
@@ -292,9 +342,6 @@ li {
 
   &__left {
     flex: 1;
-    // width: auto;
-    // color: white;
-    // background-color: @accent-color;
 
     .section-headline {
       color: white;
