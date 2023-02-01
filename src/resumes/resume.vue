@@ -227,15 +227,30 @@ a {
 
 
 ul {
-  padding-left: 8px;
-  margin: 0;
+  padding-left: 0px;
+  margin-left: 2ch;
+  margin-top: 0;
+  margin-bottom: 0;
 }
+// li {
+//   display: list-item;
+//   padding-inline-start: 1ch;
+//   list-style-type: ">";
+// }
 
 li {
   display: list-item;
-  list-style-type: ">";
-  padding-inline-start: 1ch;
+  list-style-type: none;
+  margin-right: 2ch;
 }
+li::before {
+  content: ">";
+  // padding-inline: 1ch;
+  margin-inline-end: 1ch;
+  margin-left: -2ch;
+  width: 1ch;
+}
+
 
 @font-face {
 	font-family: ubuntu;
