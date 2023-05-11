@@ -79,23 +79,23 @@ education:
 #   description: HNC, Edinburgh College.
 #   website: http://www.edinburghcollege.ac.uk/Welcome/Our-Campuses/Granton 
 skills:
-- name: Embedded C
+- name: Bash
+  level: 80
+- name:  C
   level: 80
 - name: Golang
   level: 80
-- name: Linux
-  level: 99
+- name: Python
+  level: 80
 - name: Container Orchestration
   level: 70
-- name: Python
-  level: 99
 - name: JavaScript
   level: 80
-- name: AVR
-  level: 80
-- name: Programmable IO
-  level: 80
-- name: Verilog
+- name: Linux
+  level: 99
+- name: Red Hat OpenShift
+  level: 99
+- name: Kubernetes
   level: 80
 
 knowledge: 
