@@ -79,18 +79,10 @@ const convert = async () => {
 
             await page.evaluate(() => document.querySelector('.content').style.background = 'none');
 
-            const height = await page.evaluate(
-                () => {
-		  body = document.body,
-		  html = document.documentElement;
-
-		  return Math.max( body.scrollHeight, body.offsetHeight, 
-		      	           html.clientHeight, html.scrollHeight, html.offsetHeight );
-		}
-            );
+            const height = await page.evaluate(() => document.documentElement.offsetHeight);
             await page.pdf({
                 path: fullDirectoryPath + dir.name + '.pdf',
-                height: (height) + 'px',
+                height: height + 'px',
                 printBackground: true,
                 margin: 'none'
             });

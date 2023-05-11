@@ -81,22 +81,22 @@ education:
 skills:
 - name: Embedded C
   level: 80
-- name: Programmable IO
-  level: 80
-- name: Verilog
-  level: 80
-- name: AVR
-  level: 80
-- name: Python
-  level: 99
-- name: JavaScript
-  level: 80
 - name: Golang
   level: 80
 - name: Linux
   level: 99
 - name: Container Orchestration
   level: 70
+- name: Python
+  level: 99
+- name: JavaScript
+  level: 80
+- name: AVR
+  level: 80
+- name: Programmable IO
+  level: 80
+- name: Verilog
+  level: 80
 
 knowledge: 
 projects:
