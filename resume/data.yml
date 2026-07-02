@@ -4,9 +4,9 @@ name:
   middle: 
   last: Kennedy
 
-position: Platform Software Engineer
+position: Cloud Platform Engineer
 
-about: Platform and software engineer with almost ten years' experience delivering infrastructure, middleware and cloud platform capabilities in financial services. I specialise in using software engineering, automation and platform engineering principles to reduce operational complexity, improve delivery speed and make shared platforms easier for other engineers to consume. My background spans OpenShift, Kubernetes, Linux, middleware, CI/CD, REST APIs, scripting and developer tooling, with practical software development experience across Go, Shell, JavaScript and C++. Alongside my professional work, I build and maintain open-source projects involving cloudless device onboarding, local-first home automation, embedded systems and API-driven hardware control.
+about: 
 
 birth:
   year: 1995
@@ -14,14 +14,14 @@ birth:
 
 experience:
 - company: NatWest
-  position: Cloud Infrastructure Engineer
+  position: Cloud Platform Engineer
   timeperiod: October 2023 - Present
   description:
-    - Engineered and supported strategic on-premise Container as a service (CaaS) capabilities used by internal engineering teams.
-    - Applied platform engineering principles to improve shared OpenShift and Kubernetes-based products, with a focus on reliability, automation, availability and developer experience.
-    - Developed platform engineering capabilities for OpenShift through policy-driven automation and GitLab CI/CD, enabling GitOps orchestration, HashiCorp Vault integration and customer guardrails.
-    - Worked with principal engineers, architects, platform teams and stakeholders to understand platform requirements and deliver pragmatic technical outcomes within a regulated financial services environment.
-    - Continuously evaluated and prototyped improvements to platform tooling, automation and operational workflows.
+    - Engineered strategic on-premise Container-as-a-Service (CaaS) capabilities supporting 32 OpenShift clusters across four environments for approximately 300 engineering teams.
+    - Developed platform engineering capabilities through policy-driven automation and GitLab CI/CD, delivering centralised GitOps orchestration, HashiCorp Vault integration and customer guardrails.
+    - Designed reusable platform capabilities consumed by approximately 300 application teams, reducing operational complexity while improving consistency and self-service.
+    - Collaborated within a 12-person platform engineering team alongside principal engineers, architects and stakeholders to deliver shared platform capabilities in a regulated financial services environment.
+    - Continuously evaluated, prototyped and implemented improvements to platform tooling, automation and operational workflows to increase platform maturity and developer productivity.
   website: https://natwest.com
 
 - company: NatWest
@@ -66,85 +66,92 @@ experience:
 education:
 - degree: Certificate of Higher Education in Engineering
   timeperiod: April 2023 - October 2025
-  description: Open University. Completed four engineering modules with Distinction, strengthening mathematical, analytical and systems engineering foundations.
   website: https://www.open.ac.uk/
 
 - degree: "Red Hat OpenShift Administration II: Configuring a Production Cluster (DO280)"
-  timeperiod: 2024
-  description: Production OpenShift cluster administration, configuration and operational practices.
+  timeperiod: October 2024
   website: https://www.redhat.com/en/services/training/do280-red-hat-openshift-administration-ii-configuring-production-cluster
 
 - degree: Red Hat Certified Specialist in Containers and Kubernetes
   timeperiod: July 2022
-  description: Proficiency in Podman, Kubernetes and OpenShift.
   website: https://rhtapps.redhat.com/verify?certId=220-123-673
 
 - degree: Graduate Apprenticeship Scotland in IT & Telecommunications Professionals
   timeperiod: January 2017 - November 2017
-  description: SCQF Level 8-11 Diploma for IT & Telecommunications Professionals, QA Apprenticeship.
   website: https://www.qa.com/apprenticeships/become-an-apprentice/
 
 - degree: Modern Apprenticeship Scotland in IT & Telecommunications Professionals
   timeperiod: January 2016 - November 2016
-  description: SCQF Level 6 Diploma for IT & Telecommunications Professionals, QA Apprenticeship.
   website: https://www.qa.com/apprenticeships/become-an-apprentice/
 
 - degree: HND Computer Games Development
   timeperiod: August 2013 - August 2015
-  description: Edinburgh College. Covered object-oriented programming, web development, abstract data structures, project work and user interface design.
   website: https://www.edinburghcollege.ac.uk/
 
 skills:
 - name: Platform Engineering
-  level: 95
+  category: technical
+- name: Software Engineering
+  category: technical
 - name: OpenShift / Kubernetes
-  level: 90
-- name: Linux
-  level: 95
+  category: technical
 - name: Automation
-  level: 95
-- name: Shell / Bash / KornShell
-  level: 90
-- name: Go
-  level: 80
-- name: Python
-  level: 85
-- name: JavaScript
-  level: 80
-- name: REST APIs
-  level: 85
+  category: technical
 - name: CI/CD
-  level: 80
+  category: technical
+- name: Linux
+  category: technical
 - name: Infrastructure as Code
-  level: 80
-- name: Security and Policy Controls
-  level: 80
-- name: Stakeholder Communication
-  level: 85
+  category: technical
+- name: Go
+  category: technical
+- name: Shell / Bash / KornShell
+  category: technical
+- name: REST APIs
+  category: technical
+- name: Python
+  category: technical
+- name: JavaScript
+  category: technical
 - name: Embedded C / C++
-  level: 75
+  category: technical
+- name: Security & Policy Controls
+  category: technical
+
+- name: Technical Leadership
+  category: professional
+- name: Stakeholder Communication
+  category: professional
+- name: Cross-functional Collaboration
+  category: professional
+- name: Problem Solving
+  category: professional
+- name: Continuous Improvement
+  category: professional
+- name: Mentoring
+  category: professional
 
 knowledge:
 
 projects:
 - name: tapo-onboarding
   platform: Shell / Reverse Engineering / IoT
-  description: Open-source tooling for onboarding modern TP-Link Tapo cameras without using the vendor cloud, including support for newer v3 encrypted provisioning.
+  description: Reverse engineered TP-Link's encrypted provisioning protocol to create one of the first open-source toolchains capable of onboarding modern Tapo cameras without vendor cloud services, solving a problem previously lacking a practical community solution.
   url: https://github.com/kennedn/tapo-onboarding
 
 - name: Stateful
   platform: JavaScript / Pebble / REST APIs
-  description: Pebble smartwatch application providing a tile-based interface for controlling RESTful APIs with minimal user interaction.
+  description: Developed a generic REST client for Pebble that enabled arbitrary REST APIs to be modelled and controlled from the watch without assumptions about the underlying service, addressing a capability absent from existing applications on the platform.
   url: https://github.com/kennedn/Stateful
 
 - name: restate-go
   platform: Go / Home Automation / APIs
-  description: Local-first home automation platform written in Go, designed to provide cloudless automation without dependence on external services.
+  description: Developing a local-first home automation platform that prioritises ownership, privacy and reliability over cloud-dependent architectures, exploring an alternative to conventional commercial ecosystems.
   url: https://github.com/kennedn/restate-go
 
 - name: Snowdon II WiFi
   platform: C++ / Raspberry Pi Pico / REST APIs / Infrared
-  description: Raspberry Pi Pico based modchip adding Wi-Fi and a RESTful API to a Majority Snowdon II soundbar by driving its infrared interface and inferring state from status LED.
+  description: Engineered an embedded hardware modification that adds Wi-Fi and a REST API to a consumer soundbar through infrared protocol emulation and state inference, creating capabilities unavailable from the manufacturer.
   url: https://github.com/kennedn/snowdon-ii-wifi
 
 
