@@ -11,7 +11,7 @@
         <div class="section">
 
           <div class="letter">
-        <p>Dear [Hiring Manager Name],</p>
+        <p>Dear Mr McCarthy,</p>
 
         <p>
           For almost ten years I have built and automated platforms inside NatWest Group, progressing from an apprenticeship in WebSphere to engineering the bank's strategic on-premise Container-as-a-Service capability. Today, I work as part of the platform engineering team responsible for shared OpenShift capabilities used across approximately 300 engineering teams. That progression has given me deep institutional knowledge of the bank alongside a proven ability to design and deliver platform products that simplify how other engineers build and operate software.
