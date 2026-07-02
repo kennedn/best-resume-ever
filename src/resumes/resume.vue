@@ -22,7 +22,7 @@
         </p>
 
         <p>
-          Automation has been the common thread throughout my career. Whether replacing manual licensing across approximately 5,000 servers as an apprentice, automating upgrades for more than 1,600 deployment agents across 50 teams, or engineering policy-driven platform automation for a the 300 engineering teams I supprot today, my focus has remained the same: identify repetitive, high-friction work and replace it with reliable, reusable software.
+          Automation has been the common thread throughout my career. Whether replacing manual licensing across approximately 5,000 servers as an apprentice, automating upgrades for more than 1,600 deployment agents across 50 teams, or engineering policy-driven platform automation for ~1200 applications running on openshift. My focus has remained the same: identify repetitive, high-friction work and replace it with reliable, reusable software.
         </p>
 
         <p>
