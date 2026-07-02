@@ -36,6 +36,25 @@
             </a>
           </div>
         </div>
+        
+        <div
+          v-if="person.projects"
+          class="section">
+          <div class="section-headline">
+            <i class="section-headline__icon material-icons">code</i>{{ lang.projects }}
+          </div>
+
+          <div class="section-content">
+            <a target="_blank" v-for="(project, index) in person.projects" :key="index"
+              class="section-content__item"
+              :href="project.url">
+              <span class="section-content__header"> {{ project.name }} </span>
+              <span class="section-content__text">{{ project.platform }}</span>
+              <span class="section-content__text"> {{ project.description }} </span>
+
+            </a>
+          </div>
+        </div>
 
         <div class="section">
           <div class="section-headline">
@@ -50,7 +69,7 @@
               :href="education.website">
 
               <span class="section-content__header"> {{ education.school }} </span>
-              <span class="section-content__subheader">{{ education.degree }}</span>
+              <span class="section-content__header">{{ education.degree }}</span>
               <span class="section-content__text"> {{ education.timeperiod }} </span>
               <span class="section-content__text"> {{ education.description }} </span>
             </a>
@@ -77,28 +96,10 @@
           </div>
         </div>
 -->
-        <div
-          v-if="person.projects"
-          class="section">
-          <div class="section-headline">
-            <i class="section-headline__icon material-icons">code</i>{{ lang.projects }}
-          </div>
-
-          <div class="section-content">
-            <a target="_blank" v-for="(project, index) in person.projects" :key="index"
-              class="section-content__item"
-              :href="project.url">
-              <span class="section-content__header"> {{ project.name }} </span>
-              <span class="section-content__text">{{ project.platform }}</span>
-              <span class="section-content__text"> {{ project.description }} </span>
-
-            </a>
-          </div>
-        </div>
       </div>
 
       <div class="content__left">
-        <div class="section">
+        <!-- <div class="section">
           <div class="section-headline">
             {{ lang.about }}
           </div>
@@ -109,9 +110,9 @@
             <br/>
             {{ person.knowledge }}
           </div>
-        </div>
+        </div> -->
 
-        <div
+        <!-- <div
           v-if="person.skills"
           class="section">
           <div class="section-headline">
@@ -123,6 +124,44 @@
               v-for="(skill, index) in person.skills"
               class="grid-item"
               :key="index"
+              :href="skill.url">
+              <span class="squarred-grid-item">
+                {{ skill.name }}
+              </span>
+            </a>
+          </div>
+        </div> -->
+        <div
+          v-if="person.skills"
+          class="section">
+
+          <div class="section-headline">
+            Technical Skills
+          </div>
+
+          <div class="section-content-grid">
+            <a
+              v-for="(skill, index) in person.skills.filter(s => s.category === 'technical')"
+              :key="'tech-' + index"
+              class="grid-item"
+              target="_blank"
+              :href="skill.url">
+              <span class="squarred-grid-item">
+                {{ skill.name }}
+              </span>
+            </a>
+          </div>
+
+          <div class="section-headline">
+            Professional Skills
+          </div>
+
+          <div class="section-content-grid">
+            <a
+              v-for="(skill, index) in person.skills.filter(s => s.category === 'professional')"
+              :key="'prof-' + index"
+              class="grid-item"
+              target="_blank"
               :href="skill.url">
               <span class="squarred-grid-item">
                 {{ skill.name }}
@@ -184,7 +223,7 @@
       </div>
     </div>
 
-    <img class="picture"/>
+    <!-- <img class="picture"/> -->
   </div>
 </template>
 
@@ -198,8 +237,8 @@ export default Vue.component(name, getVueOptions(name));
 </script>
 
 <style lang="less" scoped>
-@accent-color: rgba(0,0,0,0.08);
-@banner-color: #1C817E;
+@accent-color: #1F4E79;
+@banner-color: #FFFFFF;
 @banner-height: 60px;
 @picture-size: 120px;
 @picture-offset: 275px;
@@ -207,99 +246,93 @@ export default Vue.component(name, getVueOptions(name));
 @base-padding: 30px;
 @left-column-width: 60%;
 
-
 .resume {
-  background-color: @banner-color;
+  background-color: #ffffff;
+  color: #000000;
   overflow: auto;
 }
 
 a {
   color: inherit;
   cursor: pointer;
-  text-decoration-line: none;
+  text-decoration: none;
 
   &:visited {
     color: inherit;
   }
+
+  &:hover {
+    color: @accent-color;
+  }
 }
 
-
-
-
 ul {
-  padding-left: 0px;
+  padding-left: 0;
   margin-left: 2ch;
   margin-top: 0;
   margin-bottom: 0;
 }
-// li {
-//   display: list-item;
-//   padding-inline-start: 1ch;
-//   list-style-type: ">";
-// }
 
 li {
   display: list-item;
   list-style-type: none;
   margin-right: 2ch;
 }
+
 li::before {
   content: ">";
-  // padding-inline: 1ch;
+  color: @accent-color;
   margin-inline-end: 1ch;
   margin-left: -2ch;
   width: 1ch;
 }
 
-
 @font-face {
-	font-family: ubuntu;
+  font-family: ubuntu;
   src: url('~@/assets/font/Ubuntu-R.ttf');
 }
 
 .resume {
   position: relative;
-  font-family:'ubuntu' !important;
+  font-family: 'ubuntu' !important;
   font-size: 1.1em;
 }
-
-// @media (max-width: 450px) {
-
-// @media (min-width: 451px) {
-// }
-
 
 @media (min-width:401px) {
   .banner {
     width: calc(100% - @base-padding * 2);
     height: @banner-height;
     padding: @base-padding;
-    background-color: @banner-color;
-
-    color: white;
+    background: @banner-color;
+    border-bottom: 3px solid @accent-color;
+    color: #000;
 
     &__fullname {
       font-size: 32px;
+      font-weight: 700;
+      color: @accent-color;
       overflow: auto;
     }
 
     &__position {
       font-size: 16px;
+      color: @accent-color;
     }
 
     &__location {
       font-size: 12px;
+      color: #555;
     }
   }
+
   .picture {
     position: absolute;
     top: 0;
     left: (@base-padding * 2) - (@picture-size / 2) + @picture-offset;
-    // left: 0;
     height: @picture-size;
     width: @picture-size;
     border-radius: 50%;
-    border: 5px solid @accent-color;
+    border: 4px solid @accent-color;
     content: url('../../resume/id.jpg');
     z-index: 2;
   }
@@ -310,31 +343,36 @@ li::before {
     width: calc(100% - @base-padding * 2);
     height: @banner-height;
     padding: @base-padding;
-    background-color: @banner-color;
-
-    color: white;
+    background: @banner-color;
+    border-bottom: 3px solid @accent-color;
+    color: #000;
 
     &__fullname {
       font-size: 24px;
+      font-weight: 700;
+      color: @accent-color;
       overflow: auto;
     }
 
     &__position {
       font-size: 14px;
+      color: @accent-color;
     }
 
     &__location {
       font-size: 12px;
+      color: #555;
     }
   }
+
   .picture {
     position: absolute;
     top: 0;
-    left: (@base-padding * 2) - (@picture-size / 2) + @picture-offset ;
+    left: (@base-padding * 2) - (@picture-size / 2) + @picture-offset;
     height: @picture-size;
     width: @picture-size;
     border-radius: 50%;
-    border: 5px solid @accent-color;
+    border: 4px solid @accent-color;
     content: url('../../resume/id.jpg');
     z-index: 2;
   }
@@ -345,10 +383,7 @@ li::before {
   width: 100%;
   height: 100%;
   min-width: 550px;
-  background: linear-gradient(to right,white 2px,transparent 2px),linear-gradient(to right,white 2px,transparent 2px)0 100%,linear-gradient(to left,white 2px,transparent 2px)100% 0,linear-gradient(to left,white 2px,transparent 2px)100% 100%,linear-gradient(to bottom,white 2px,transparent 2px),linear-gradient(to bottom,white 2px,transparent 2px)100% 0,linear-gradient(to top,white 2px,transparent 2px)0 100%,linear-gradient(to top,white 2px,transparent 2px)100% 100%;
-  background-color: rgba(0, 0, 0, 0);
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
+  background: #ffffff;
   overflow: auto;
 
   &__left,
@@ -356,16 +391,13 @@ li::before {
     height: auto;
     width: auto;
     padding: @base-padding;
-    background-color: @accent-color;
-    color: white;
+    background: #ffffff;
+    color: #000000;
   }
 
   &__left {
     flex: 1;
-
-    .section-headline {
-      color: white;
-    }
+    border-right: 1px solid #d8d8d8;
   }
 
   &__right {
@@ -377,62 +409,75 @@ li::before {
   margin: 20px 0;
 }
 
-.section-link,
 .section-headline {
   display: flex !important;
   align-items: center;
-  // color: @accent-color;
-  color: white;
-  display: inline-block;
+  color: @accent-color;
   font-size: 1.2em;
-  margin: 8px 0;
+  font-weight: 700;
+  margin: 10px 0;
+  border-bottom: 2px solid @accent-color;
+  padding-bottom: 4px;
 
   &__icon {
     margin-right: 8px;
-    font-size: 1.4em;
+    font-size: 1.3em;
+    color: @accent-color;
   }
 }
 
 .section-link {
-  font-size: 1.1em;
-  color: white !important;
-  
+  display: flex;
+  align-items: center;
+  color: @accent-color;
+  font-size: 1.05em;
+  margin: 6px 0;
+
+  &:hover {
+    color: @accent-color;
+  }
 
   &__icon {
-    color: white;
+    color: @accent-color;
+    margin-right: 8px;
   }
 }
 
 .section-content {
-  margin-top: 5px;
+  margin-top: 8px;
   padding-left: 16px;
   font-size: 16px;
+  color: #000;
 
   &__item {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 16px;
   }
 
   &__header {
     display: block;
-    font-size: 1.1em;
-    font-weight: 500;
+    font-size: 1.08em;
+    font-weight: 600;
+    color: @accent-color;
   }
 
   &__subheader {
     display: block;
-    font-weight: 400;
+    color: #333;
+    font-weight: 500;
   }
 
   &__plain,
   &__text {
     display: block;
     font-size: 14px;
+    color: #444;
 
     &--light {
       font-size: 14px;
-
+      color: #444;
     }
+
     &--light::after {
       content: "\a";
       white-space: pre;
@@ -441,7 +486,7 @@ li::before {
 
   &__plain {
     display: inline;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   &__item-grid {
@@ -458,20 +503,23 @@ li::before {
 .section-content-grid {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .grid-item {
-  padding-right: 5px;
+  padding-right: 6px;
 }
 
 .squarred-grid-item {
   display: block;
-  border: 1px solid white;
-  color: white;
-  margin-top: 5px;
-  padding: 5px;
+  border: 1px solid @accent-color;
+  color: @accent-color;
+  background: #f7f9fc;
+  border-radius: 3px;
+  margin-top: 6px;
+  padding: 6px 10px;
   font-size: 0.9em;
+  font-weight: 500;
 }
 </style>

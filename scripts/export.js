@@ -85,7 +85,9 @@ const convert = async () => {
 
             await page.evaluate(() => document.querySelector('.content').style.background = 'none');
 
-            const height = await page.evaluate(() => document.documentElement.offsetHeight);
+            const height = await page.evaluate(() => document.documentElement.offsetHeight + 1);
+            
+
             await page.pdf({
                 path: fullDirectoryPath + dir.name + '.pdf',
                 width: `${PDF_WIDTH}px`,

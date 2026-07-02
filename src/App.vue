@@ -24,6 +24,6 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  background: #1C817E;
+  /* background: #1C817E; */
 }
 </style>
