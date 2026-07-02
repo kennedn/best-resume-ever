@@ -19,8 +19,8 @@ experience:
   description:
     - Engineered strategic on-premise Container-as-a-Service (CaaS) capabilities supporting 32 OpenShift clusters across four environments for approximately 300 engineering teams.
     - Developed platform engineering capabilities through policy-driven automation and GitLab CI/CD, delivering centralised GitOps orchestration, HashiCorp Vault integration and customer guardrails.
-    - Designed reusable platform capabilities consumed by approximately 300 application teams, reducing operational complexity while improving consistency and self-service.
-    - Collaborated within a 12-person platform engineering team alongside principal engineers, architects and stakeholders to deliver shared platform capabilities in a regulated financial services environment.
+    - Designed reusable platform capabilities consumed by ~1200 applications, reducing operational complexity while improving consistency and self-service.
+    - Collaborated within a 20-person platform engineering team alongside principal engineers, architects and stakeholders to deliver shared platform capabilities in a regulated financial services environment.
     - Continuously evaluated, prototyped and implemented improvements to platform tooling, automation and operational workflows to increase platform maturity and developer productivity.
   website: https://natwest.com
 
