@@ -4,6 +4,8 @@ const path = require('path');
 const http = require('http');
 const config = require('../config');
 
+const PDF_WIDTH = 1200;
+
 const {
     interval
 } = require('rxjs');
@@ -59,6 +61,10 @@ const convert = async () => {
                 args: ['--no-sandbox']
             });
             const page = await browser.newPage();
+            await page.setViewport({
+              width: PDF_WIDTH,
+              height: 1000
+            });
             await page.goto(`http://localhost:${config.dev.port}/#/`, {
                 waitUntil: 'networkidle2'
             });
@@ -82,6 +88,7 @@ const convert = async () => {
             const height = await page.evaluate(() => document.documentElement.offsetHeight);
             await page.pdf({
                 path: fullDirectoryPath + dir.name + '.pdf',
+                width: `${PDF_WIDTH}px`,
                 height: height + 'px',
                 printBackground: true,
                 margin: 'none'
