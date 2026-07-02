@@ -1,157 +1,168 @@
 export const PERSON = `
-# Any fields left unchanged, please delete so your resume is fully yours!
-
 name:
   first: Joshua
   middle: 
   last: Kennedy
-about: I have built a career on exploring rabbit holes. As it turns out, rabbits come in many colours and I have yet to find one that did not have something to offer. I have had as much fun trying to perfect my latest cooking endeavour as I've had trying to digest the broad strokes of quantum mechanics. In applying this same exploratory enthusiasm to computing I have found my life's work. For over a decade I have been delving deeper and deeper into the field of computing. From games development to container orchestration to signal processing I have with each step been building holistic knowledge of the field. In recent years I have finally made it down to the metal, exploring concepts such as Embedded C, Programmable IO and FPGA design through my personal projects.
 
-position: Professional Tinkerer
+position: Platform Software Engineer
+
+about: Platform and software engineer with almost ten years' experience delivering infrastructure, middleware and cloud platform capabilities in financial services. I specialise in using software engineering, automation and platform engineering principles to reduce operational complexity, improve delivery speed and make shared platforms easier for other engineers to consume. My background spans OpenShift, Kubernetes, Linux, middleware, CI/CD, REST APIs, scripting and developer tooling, with practical software development experience across Go, Shell, JavaScript and C++. Alongside my professional work, I build and maintain open-source projects involving cloudless device onboarding, local-first home automation, embedded systems and API-driven hardware control.
 
 birth:
   year: 1995
   location: Scotland
 
-# you may add more experiences by duplicating the template
-
 experience:
 - company: NatWest
-  position: Cloud Platforms Engineer
-  timeperiod: Since October 2023
-  description: 
-    - Engineering and supporting the banks strategic on-prem PaaS and CaaS offerings
+  position: Cloud Infrastructure Engineer
+  timeperiod: October 2023 - Present
+  description:
+    - Engineered and supported strategic on-premise Container as a service (CaaS) capabilities used by internal engineering teams.
+    - Applied platform engineering principles to improve shared OpenShift and Kubernetes-based products, with a focus on reliability, automation, availability and developer experience.
+    - Developed platform engineering capabilities for OpenShift through policy-driven automation and GitLab CI/CD, enabling GitOps orchestration, HashiCorp Vault integration and customer guardrails.
+    - Worked with principal engineers, architects, platform teams and stakeholders to understand platform requirements and deliver pragmatic technical outcomes within a regulated financial services environment.
+    - Continuously evaluated and prototyped improvements to platform tooling, automation and operational workflows.
   website: https://natwest.com
 
 - company: NatWest
   position: Cloud Automation Engineer
   timeperiod: September 2021 - October 2023
-  description: 
-    - Joined a small R&D team with the purpose of expanding the banks on-prem cloud computing capabilities. Honed skills in Openshift, Kubernetes and general container orchestration.
-    - Worked closely with colleagues from other teams to deliver proof of concept pieces for certificate automation via cert-manager and centralised secret management via Hashicorp Vault
+  description:
+    - Joined a small R&D team focused on expanding the bank's on-premise cloud computing capabilities.
+    - Built experience across OpenShift, Kubernetes, container orchestration, Linux and cloud platform automation.
+    - Delivered proof-of-concept work for certificate automation using cert-manager and centralised secret management using HashiCorp Vault.
+    - Collaborated across teams to turn emerging platform requirements into working prototypes and executable patterns.
+    - Supported automation and CI/CD-aligned delivery practices to reduce manual effort and increase consistency across platform operations.
   website: https://natwest.com
-
 
 - company: NatWest
   position: Middleware Systems Engineer
   timeperiod: February 2019 - September 2021
-  description: 
-    - Built automation to streamline common support tasks for deployment orchestration tooling within a small feature team. One of the tasks automated was agent upgrading. This facilitated the upgrade of over 1600 agents in the span of 6 months across 50 different teams. A feat that would have otherwise been unachievable in a reasonable timeframe.
-    - Provided support for users and administrators in deployment orchestration. Created a large amount of documentation and hosted workshops. This resulted in the upskilling of an entire support team in the administration of related tooling. 
+  description:
+    - Built automation to streamline common support tasks for deployment orchestration tooling within a feature team.
+    - Automated agent upgrade workflows, enabling over 1,600 agents to be upgraded across approximately 50 teams within six months.
+    - Supported users and administrators of deployment orchestration platforms, producing documentation and running workshops to upskill a wider support team.
+    - Improved platform support processes by combining scripting, documentation, incident analysis and close collaboration with consuming teams.
   website: https://natwest.com
-  
+
 - company: RBS
-  position: Middleware Technical Analyst 
+  position: Middleware Technical Analyst
   timeperiod: January 2018 - February 2019
-  description: 
-    - Delivered technical support for Java based enterprise software, providing successful resolution for over 150 individual incidents.
-    - Developed infrastructure support scripts for and assisted in standing up deployment orchestration tooling. Acquired new skills in RESTful API interaction and high availability clustering technologies as a result.
+  description:
+    - Delivered technical support for Java-based enterprise middleware, resolving over 150 individual incidents.
+    - Developed infrastructure support scripts and helped stand up deployment orchestration tooling.
+    - Built practical experience with REST API integration, high-availability clustering and production support in a regulated banking environment.
   website: https://natwest.com
 
 - company: RBS
   position: WebSphere Technical Apprentice
   timeperiod: January 2016 - January 2018
-  description: 
-    - Developed knowledge on KornShell scripting and used it to automate a manual licensing process for ~5000 servers.
-    - Audited and improved a certificate renewal tracking workflow. Obtained skills in Visual Basic and SQL along the way.
+  description:
+    - Developed KornShell automation to replace a manual licensing process across approximately 5,000 servers.
+    - Audited and improved certificate renewal tracking workflows, building skills in Visual Basic, SQL and enterprise middleware administration.
+    - Completed Modern and Graduate Apprenticeship pathways while working in production financial services technology teams.
   website: https://natwest.com
 
-
-
-
-
 education:
+- degree: Certificate of Higher Education in Engineering
+  timeperiod: April 2023 - October 2025
+  description: Open University. Completed four engineering modules with Distinction, strengthening mathematical, analytical and systems engineering foundations.
+  website: https://www.open.ac.uk/
+
+- degree: "Red Hat OpenShift Administration II: Configuring a Production Cluster (DO280)"
+  timeperiod: 2024
+  description: Production OpenShift cluster administration, configuration and operational practices.
+  website: https://www.redhat.com/en/services/training/do280-red-hat-openshift-administration-ii-configuring-production-cluster
+
 - degree: Red Hat Certified Specialist in Containers and Kubernetes
   timeperiod: July 2022
-  description: Proficiency in podman, kubernetes & OpenShift
+  description: Proficiency in Podman, Kubernetes and OpenShift.
   website: https://rhtapps.redhat.com/verify?certId=220-123-673
 
-- degree: IT & Telecoms Professional
-  timeperiod: January 2017 - January 2018
-  description: SCQF Level 8, QA Apprenticeship
+- degree: Graduate Apprenticeship Scotland in IT & Telecommunications Professionals
+  timeperiod: January 2017 - November 2017
+  description: SCQF Level 8-11 Diploma for IT & Telecommunications Professionals, QA Apprenticeship.
   website: https://www.qa.com/apprenticeships/become-an-apprentice/
 
-- degree: IT & Telecoms Professional
-  timeperiod: January 2016 - January 2017
-  description: SCQF Level 6, QA Apprenticeship
+- degree: Modern Apprenticeship Scotland in IT & Telecommunications Professionals
+  timeperiod: January 2016 - November 2016
+  description: SCQF Level 6 Diploma for IT & Telecommunications Professionals, QA Apprenticeship.
   website: https://www.qa.com/apprenticeships/become-an-apprentice/
 
-# - degree: Computer Games Development
-#   timeperiod: March 2014 - December 2015
-#   description: HND, Edinburgh College.
-#   website: http://www.edinburghcollege.ac.uk/Welcome/Our-Campuses/Granton 
+- degree: HND Computer Games Development
+  timeperiod: August 2013 - August 2015
+  description: Edinburgh College. Covered object-oriented programming, web development, abstract data structures, project work and user interface design.
+  website: https://www.edinburghcollege.ac.uk/
 
-# - degree: Computer Games Development
-#   timeperiod: March 2013 - December 2014
-#   description: HNC, Edinburgh College.
-#   website: http://www.edinburghcollege.ac.uk/Welcome/Our-Campuses/Granton 
 skills:
-- name: Embedded C
-  level: 80
-- name: Golang
-  level: 80
+- name: Platform Engineering
+  level: 95
+- name: OpenShift / Kubernetes
+  level: 90
 - name: Linux
-  level: 99
-- name: Container Orchestration
-  level: 70
+  level: 95
+- name: Automation
+  level: 95
+- name: Shell / Bash / KornShell
+  level: 90
+- name: Go
+  level: 80
 - name: Python
-  level: 99
+  level: 85
 - name: JavaScript
   level: 80
-- name: AVR
+- name: REST APIs
+  level: 85
+- name: CI/CD
   level: 80
-- name: Programmable IO
+- name: Infrastructure as Code
   level: 80
-- name: Verilog
+- name: Security and Policy Controls
   level: 80
+- name: Stakeholder Communication
+  level: 85
+- name: Embedded C / C++
+  level: 75
 
-knowledge: 
+knowledge:
+
 projects:
-- name: Snowdon II WiFi
-  platform: C / Programmable IO
-  description: A hardware mod for the Snowdon II soundbar. Implements a HTTP server and infrared NEC encoder from scratch to enable IR remote code signalling over WiFi.
-  url: https://github.com/kennedn/snowdon-ii-wifi
+- name: tapo-onboarding
+  platform: Shell / Reverse Engineering / IoT
+  description: Open-source tooling for onboarding modern TP-Link Tapo cameras without using the vendor cloud, including support for newer v3 encrypted provisioning.
+  url: https://github.com/kennedn/tapo-onboarding
 
 - name: Stateful
-  platform: C / Javascript
-  description: A Pebble watchapp designed to control RESTful API's with minimal clicks
-  url: https://github.com/kennedn/stateful
+  platform: JavaScript / Pebble / REST APIs
+  description: Pebble smartwatch application providing a tile-based interface for controlling RESTful APIs with minimal user interaction.
+  url: https://github.com/kennedn/Stateful
 
-- name: restate-go 
-  platform: Golang
-  description: A cloudless home automation solution powered by Golang
+- name: restate-go
+  platform: Go / Home Automation / APIs
+  description: Local-first home automation platform written in Go, designed to provide cloudless automation without dependence on external services.
   url: https://github.com/kennedn/restate-go
 
-- name: MPRIS Panel 
-  platform: Javascript / DBus
-  description: A media controller for linux that uses a 'smart-switching' technique to effortlessly control multiple media sources.
-  url: https://github.com/kennedn/gnome-shell-extension-mprispanel
+- name: Snowdon II WiFi
+  platform: C++ / Raspberry Pi Pico / REST APIs / Infrared
+  description: Raspberry Pi Pico based modchip adding Wi-Fi and a RESTful API to a Majority Snowdon II soundbar by driving its infrared interface and inferring state from status LED.
+  url: https://github.com/kennedn/snowdon-ii-wifi
 
-
-
-
-# optional, not all resume templates have hobbies included
-hobbies:
-- name: Video Games
-  iconClass: fa fa-gamepad
-  url: https://example.com
-
-- name: Drawing
-  iconClass: fa fa-pencil
-  url: https://example.com
 
 certificates:
-- name: Cisco Certified Entry Networking Technician (CCENT)
-  description: Blah Blah Blah
+- name: "Red Hat OpenShift Administration II: Configuring a Production Cluster (DO280) - Ver. 4.14"
+  description: Production OpenShift administration and configuration.
+
+- name: Red Hat Certified Specialist in Containers and Kubernetes
+  description: Red Hat certification covering Podman, Kubernetes and OpenShift. Credential ID 220-123-673.
 
 contact:
   email: kennedn@msn.com
   phone: 
   street:
-  city:
+  city: Edinburgh, Scotland
   website: kennedn.com
   github: kennedn
-  linkedin: kennedn 
-# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
+  linkedin: kennedn
+
 lang: en
 `
