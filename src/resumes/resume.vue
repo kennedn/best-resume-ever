@@ -9,221 +9,46 @@
     <div class="content">
       <div class="content__right">
         <div class="section">
-          <div class="section-headline">
-            <i class="section-headline__icon material-icons">work</i>{{ lang.experience }}
-          </div>
 
-          <div class="section-content">
-            <a target="_blank"
-              v-for="(experience, index) in person.experience"
-              :key="index"
-              class="section-content__item"
-              :href="experience.website">
+          <div class="letter">
+        <p>Dear [Hiring Manager Name],</p>
 
-              <span class="section-content__header">{{ experience.position }}</span>
-              <span class="section-content__subheader">
-              	{{ experience.company }}
-                <span class="section-content__plain">{{ experience.location }} -</span>
-                <div class="section-content__text" style="display:inline;">{{ experience.timeperiod }}</div>
-              </span>
+        <p>
+          For almost ten years I have built and automated platforms inside NatWest Group, progressing from an apprenticeship in WebSphere to engineering the bank's strategic on-premise Container-as-a-Service capability. Today, I work as part of the platform engineering team responsible for shared OpenShift capabilities used across approximately 300 engineering teams. That progression has given me deep institutional knowledge of the bank alongside a proven ability to design and deliver platform products that simplify how other engineers build and operate software.
+        </p>
 
-              <ul>
-              <div v-for="(description, index) in experience.description"
-              :key="index">
-                <li class="section-content__text--light">{{ description }}</li>
-              </div>
-              </ul>
-            </a>
-          </div>
-        </div>
-        
-        <div
-          v-if="person.projects"
-          class="section">
-          <div class="section-headline">
-            <i class="section-headline__icon material-icons">code</i>{{ lang.projects }}
-          </div>
+        <p>
+          My work is centred on turning platform requirements into reusable engineering capabilities. I develop policy-driven automation and GitLab CI/CD workflows that enable GitOps orchestration, HashiCorp Vault integration and customer guardrails across 32 OpenShift clusters spanning four environments. Rather than relying on manual processes, I aim to express platform standards as executable patterns that allow engineering teams to consume secure, consistent capabilities by default. Before joining the platform engineering team, I spent two years in a cloud R&amp;D function situated in Core Solutions, prototyping technologies such as cert-manager, Kubernetes and Vault that have since become integral parts of the platforms I support today.
+        </p>
 
-          <div class="section-content">
-            <a target="_blank" v-for="(project, index) in person.projects" :key="index"
-              class="section-content__item"
-              :href="project.url">
-              <span class="section-content__header"> {{ project.name }} </span>
-              <span class="section-content__text">{{ project.platform }}</span>
-              <span class="section-content__text"> {{ project.description }} </span>
+        <p>
+          Automation has been the common thread throughout my career. Whether replacing manual licensing across approximately 5,000 servers as an apprentice, automating upgrades for more than 1,600 deployment agents across 50 teams, or engineering policy-driven platform automation for a the 300 engineering teams I supprot today, my focus has remained the same: identify repetitive, high-friction work and replace it with reliable, reusable software.
+        </p>
 
-            </a>
-          </div>
-        </div>
+        <p>
+          Working in a regulated financial institution has made secure-by-design engineering second nature. Policy-driven governance, automated certificate management, secrets management, CI/CD and platform guardrails are built into the platforms I help deliver rather than added afterwards. I work closely with principal engineers, architects and stakeholders to shape technical direction, while mentoring colleagues, producing documentation and helping teams adopt new platform capabilities. I enjoy translating complex technical problems into pragmatic engineering solutions that enable others to deliver software more effectively.
+        </p>
 
-        <div class="section">
-          <div class="section-headline">
-            <i class="section-headline__icon material-icons">school</i>{{ lang.education }}
-          </div>
+        <p>
+          The same engineering mindset continues outside work. Rather than building projects for the sake of technology, I tend to identify problems that existing software does not adequately solve and build the missing capability. My open-source work includes reverse-engineering TP-Link's encrypted provisioning protocol to enable cloudless onboarding of modern Tapo cameras, designing a configurable smartwatch application capable of modelling arbitrary REST APIs, developing a local-first home automation platform in Go, and engineering a Raspberry Pi Pico modification that adds Wi-Fi and a REST API to an otherwise closed consumer device. Together these projects span reverse engineering, distributed systems, embedded development and API design, and demonstrate the same curiosity and systems thinking that I bring to my professional work.
+        </p>
 
-          <div class="section-content">
-            <a target="_blank"
-              v-for="(education, index) in person.education"
-              class="section-content__item"
-              :key="index"
-              :href="education.website">
+        <p>
+          Alongside a demanding engineering role, I have continued to invest heavily in my own development. I have achieved several Red Hat certifications centered around Kubernetes and OpenShift Administration, while also completing four Open University engineering modules with Distinction. I routinely evaluate and adopt emerging technologies where they provide genuine value, making extensive use of modern AI-assisted engineering tooling to accelerate development, improve software quality and support rapid experimentation and prototyping. I believe the role of a senior engineer extends beyond technical delivery, and I place equal importance on mentoring colleagues and helping raise the capability of the wider team.
+        </p>
 
-              <span class="section-content__header"> {{ education.school }} </span>
-              <span class="section-content__header">{{ education.degree }}</span>
-              <span class="section-content__text"> {{ education.timeperiod }} </span>
-              <span class="section-content__text"> {{ education.description }} </span>
-            </a>
-          </div>
-        </div>
-<!--
-        <div
-          v-if="person.certificates"
-          class="section">
-          <div class="section-headline">
-            <i class="section-headline__icon material-icons">card_membership</i>{{lang.certificates}}
-          </div>
+        <p>
+          This role brings together everything I have been working towards over the past decade: software engineering, platform engineering and automation at enterprise scale. I would welcome the opportunity to continue building platform products that help other engineers deliver change faster, more safely and with greater confidence, while contributing to the continued evolution of NatWest Group's engineering platforms.
+        </p>
 
-          <div class="section-content">
-            <a target="_blank"
-              v-for="(certificate, index) in person.certificates"
-              class="section-content__item"
-              :key="index"
-              :href="certificate.website">
-
-              <span class="section-content__header"> {{ certificate.name }} </span>
-              <span class="section-content__text">{{ certificate.description }}</span>
-            </a>
-          </div>
-        </div>
--->
-      </div>
-
-      <div class="content__left">
-        <!-- <div class="section">
-          <div class="section-headline">
-            {{ lang.about }}
-          </div>
-
-          <div class="section-content section-content--plain">
-            {{ person.about }}
-            <br/>
-            <br/>
-            {{ person.knowledge }}
-          </div>
-        </div> -->
-
-        <!-- <div
-          v-if="person.skills"
-          class="section">
-          <div class="section-headline">
-            {{ lang.skills }}
-          </div>
-
-          <div class="section-content-grid">
-            <a target="_blank"
-              v-for="(skill, index) in person.skills"
-              class="grid-item"
-              :key="index"
-              :href="skill.url">
-              <span class="squarred-grid-item">
-                {{ skill.name }}
-              </span>
-            </a>
-          </div>
-        </div> -->
-        <div
-          v-if="person.skills"
-          class="section">
-
-          <div class="section-headline">
-            Technical Skills
-          </div>
-
-          <div class="section-content-grid">
-            <a
-              v-for="(skill, index) in person.skills.filter(s => s.category === 'technical')"
-              :key="'tech-' + index"
-              class="grid-item"
-              target="_blank"
-              :href="skill.url">
-              <span class="squarred-grid-item">
-                {{ skill.name }}
-              </span>
-            </a>
-          </div>
-
-          <div class="section-headline">
-            Professional Skills
-          </div>
-
-          <div class="section-content-grid">
-            <a
-              v-for="(skill, index) in person.skills.filter(s => s.category === 'professional')"
-              :key="'prof-' + index"
-              class="grid-item"
-              target="_blank"
-              :href="skill.url">
-              <span class="squarred-grid-item">
-                {{ skill.name }}
-              </span>
-            </a>
-          </div>
-        </div>
-
-        <div class="section">
-          <div class="section-headline">
-            {{ lang.contact }}
-          </div>
-
-          <div class="section-content section-content--plain">
-            <!--
-            <div class="section-link">
-              <i class="section-link__icon material-icons">business</i>{{ person.contact.street }}
-            </div>
-            -->
-            <a target="_blank"
-              class="section-link"
-              :href="contactLinks.email">
-              <i class="section-link__icon fa fa-paper-plane fa-fw"></i>{{ person.contact.email }}
-            </a>
-
-            <!--<div class="section-link">
-              <i class="section-link__icon material-icons">phone</i>{{ person.contact.phone }}
-            </div>
-            -->
-            <a target="_blank"
-              v-if="person.contact.website"
-              class="section-link"
-              :href="contactLinks.website">
-              <i class="section-link__icon fa fa-globe fa-fw"></i>{{ person.contact.website }}
-            </a>
-
-            <a target="_blank"
-              v-if="person.contact.linkedin"
-              class="section-link"
-              :href="contactLinks.linkedin">
-              <i class="section-link__icon fa fa-linkedin fa-fw"></i>{{ person.contact.linkedin }}
-            </a>
-
-            <a target="_blank"
-              v-if="person.contact.github"
-              class="section-link"
-              :href="contactLinks.github">
-              <i class="section-link__icon fa fa-github fa-fw"></i>{{ person.contact.github }}
-            </a>
-
-            <a target="_blank"
-              v-if="person.contact.medium"
-              class="section-link"
-              :href="contactLinks.medium">
-              <i class="section-link__icon fa fa-medium fa-fw"></i>{{ person.contact.medium }}
-            </a>
+        <p>
+          Kind regards,<br>
+          Josh
+        </p>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- <img class="picture"/> -->
   </div>
 </template>
 
@@ -244,7 +69,7 @@ export default Vue.component(name, getVueOptions(name));
 @picture-offset: 275px;
 @picture-offset-x: 35px;
 @base-padding: 30px;
-@left-column-width: 60%;
+@left-column-width: 100%;
 
 .resume {
   background-color: #ffffff;
