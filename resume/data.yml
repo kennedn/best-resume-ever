@@ -65,27 +65,33 @@ experience:
 
 education:
 - degree: Certificate of Higher Education in Engineering
+  school: The Open University
   timeperiod: April 2023 - October 2025
   website: https://www.open.ac.uk/
 
 - degree: "Red Hat OpenShift Administration II: Configuring a Production Cluster (DO280)"
   timeperiod: October 2024
+  school: Red Hat
   website: https://www.redhat.com/en/services/training/do280-red-hat-openshift-administration-ii-configuring-production-cluster
 
 - degree: Red Hat Certified Specialist in Containers and Kubernetes
   timeperiod: July 2022
+  school: Red Hat
   website: https://rhtapps.redhat.com/verify?certId=220-123-673
 
 - degree: Graduate Apprenticeship Scotland in IT & Telecommunications Professionals
   timeperiod: January 2017 - November 2017
+  school: QA
   website: https://www.qa.com/apprenticeships/become-an-apprentice/
 
 - degree: Modern Apprenticeship Scotland in IT & Telecommunications Professionals
   timeperiod: January 2016 - November 2016
+  school: QA
   website: https://www.qa.com/apprenticeships/become-an-apprentice/
 
 - degree: HND Computer Games Development
   timeperiod: August 2013 - August 2015
+  school: Edinburgh College
   website: https://www.edinburghcollege.ac.uk/
 
 skills:

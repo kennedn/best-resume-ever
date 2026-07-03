@@ -68,10 +68,12 @@
               :key="index"
               :href="education.website">
 
-              <span class="section-content__header"> {{ education.school }} </span>
               <span class="section-content__header">{{ education.degree }}</span>
-              <span class="section-content__text"> {{ education.timeperiod }} </span>
-              <span class="section-content__text"> {{ education.description }} </span>
+              <span class="section-content__subheader">
+                {{ education.school }}
+                <div class="section-content__text" style="display:inline;">- {{ education.timeperiod }}</div>
+                <span class="section-content__text"> {{ education.description }} </span>
+              </span>
             </a>
           </div>
         </div>
